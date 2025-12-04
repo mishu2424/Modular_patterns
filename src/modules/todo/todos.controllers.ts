@@ -19,9 +19,8 @@ const getTodos = async (req: Request, res: Response) => {
 };
 
 const postTodos = async (req: Request, res: Response) => {
-  const { user_id, title } = req?.body;
   try {
-    const result = await todoServices.postTodos(user_id, title);
+    const result = await todoServices.postTodos(req?.body);
     if (result?.rows?.length === 0) {
       res.status(500).json({
         success: false,
