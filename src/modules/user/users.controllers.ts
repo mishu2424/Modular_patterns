@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { pool } from "../../config/db";
 import { userServices } from "./users.services";
 
 const createUser = async (req: Request, res: Response) => {

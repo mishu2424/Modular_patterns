@@ -1,5 +1,4 @@
-import express, { Request, Response } from "express";
-import { pool } from "../../config/db";
+import express from "express";
 import { userControllers } from "./users.controllers";
 import logger from "../../middleware/logger";
 import auth from "../../middleware/auth";
